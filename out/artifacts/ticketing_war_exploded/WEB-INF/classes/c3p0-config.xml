@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <default-config>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <!--
+                1. characterEncoding:字符编码
+                2. serverTimezone：时区设置，因为mysql 8.X的必须添加，5.X不需要
+                3. useSSL=false:去除警告
+        -->
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/flight?useSSL=false&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai</property>
+        <!--        数据库账号  -->
+        <property name="user">root</property>
+        <!--        自行设置的数据库密码  -->
+        <property name="password">qwq20011127</property>
+
+        <property name="maxPoolSize" value="100"/>
+        <property name="minPoolSize" value="10"/>
+
+    </default-config>
+</c3p0-config>
